@@ -1,4 +1,4 @@
-import Item from "./item";
+import Item from './item';
 
 export default function ItemList() {
     const item1 = {
@@ -75,7 +75,7 @@ export default function ItemList() {
       
       return (
         <>
-          <Heading title="Item Lists" />
+          <h1 title="My Shopping List" />
           <Item
             name={item1.name}
             date={item1.quantity}
