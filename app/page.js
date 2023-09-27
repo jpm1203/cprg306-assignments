@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import StudentInfo from './StudentInfo';
-import ItemList from './week3/item-list';
+import ItemList from '.week3/Item';
 
 export default function Page() {
   return (
