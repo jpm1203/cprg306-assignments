@@ -2,39 +2,39 @@ import Item from './item';
 
 export default function ItemList() {
     const item1 = {
-        name: "milk, 4 L 🥛",
+        name: "Milk, 4 L 🥛",
         quantity: 1,
-        category: "dairy",
+        category: "Dairy",
       };
        
       const item2 = {
-        name: "bread 🍞",
+        name: "Bread 🍞",
         quantity: 2,
-        category: "bakery",
+        category: "Bakery",
       };
        
       const item3 = {
-        name: "eggs, dozen 🥚",
+        name: "Eggs, Dozen 🥚",
         quantity: 2,
-        category: "dairy",
+        category: "Dairy",
       };
        
       const item4 = {
-        name: "bananas 🍌",
+        name: "Bananas 🍌",
         quantity: 6,
-        category: "produce",
+        category: "Produce",
       };
        
       const item5 = {
-        name: "broccoli 🥦",
+        name: "Broccoli 🥦",
         quantity: 3,
-        category: "produce",
+        category: "Produce",
       };
        
       const item6 = {
-        name: "chicken breasts, 1 kg 🍗",
+        name: "Chicken Breasts, 1 kg 🍗",
         quantity: 1,
-        category: "meat",
+        category: "Meat",
       };
        
       const item7 = {
