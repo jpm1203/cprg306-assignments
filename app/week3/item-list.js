@@ -38,39 +38,39 @@ export default function ItemList() {
       };
        
       const item7 = {
-        name: "pasta sauce 🍝",
+        name: "Pasta Sauce 🍝",
         quantity: 3,
-        category: "canned goods",
+        category: "Canned Goods",
       };
        
       const item8 = {
-        name: "spaghetti, 454 g 🍝",
+        name: "Spaghetti, 454 g 🍝",
         quantity: 2,
-        category: "dry goods",
+        category: "Dry Goods",
       };
        
       const item9 = {
-        name: "toilet paper, 12 pack 🧻",
+        name: "Toilet Paper, 12 Pack 🧻",
         quantity: 1,
-        category: "household",
+        category: "Household",
       };
        
       const item10 = {
-        name: "paper towels, 6 pack",
+        name: "Paper Towels, 6 Pack",
         quantity: 1,
         category: "household",
       };
        
       const item11 = {
-        name: "dish soap 🍽️",
+        name: "Dish Soap 🍽️",
         quantity: 1,
-        category: "household",
+        category: "Household",
       };
        
       const item12 = {
-        name: "hand soap 🧼",
+        name: "Hand Soap 🧼",
         quantity: 4,
-        category: "household",
+        category: "Household",
       };
       
       return (
