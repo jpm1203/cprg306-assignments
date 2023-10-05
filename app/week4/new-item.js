@@ -25,7 +25,7 @@ export default function NewItem() {
         setItemCreated(false);
     
     };
-    const handleNameChange = (item) => {{
+    const handleNameChange = (item) => {
         setName(item,)
     }
-        
+}    
