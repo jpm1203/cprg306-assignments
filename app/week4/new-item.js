@@ -4,12 +4,13 @@ import { useState } from "react";
 
 export default function NewItem() {
   const [name, setName] = useState("");
-  const [quantity, setQuantity] = useState("");
-  const [category, setCategory] = useState("");
+  const [quantity, setQuantity] = useState(1);
+  const [category, setCategory] = useState("produce");
   const [itemCreated, setItemCreated] = useState("false");
 
-    const handleSubmit = async (item) => {
-        item.preventDefault();
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        alert(`submitted ${name} ${quantity} ${category}`);
 
         const newItem = {
             name,
@@ -25,14 +26,14 @@ export default function NewItem() {
         setItemCreated(false);
     
     };
-    const handleNameChange = (item) => {
-        setName(item.target.value);
+    const handleNameChange = (event) => {
+        setName(event.target.value);
     };
-    const handleQuantityChange = (item) => {
-        setQuantity(item.target.value);
+    const handleQuantityChange = (event) => {
+        setQuantity(event.target.value);
     };
-    const handleCategoryChange = (item) => {
-        setCategory(item.target.value);
+    const handleCategoryChange = (event) => {
+        setCategory(event.target.value);
     };
     
     return (
@@ -61,30 +62,39 @@ export default function NewItem() {
                 <label className="block mb-4">
                   <span className="text-gray-800">Item quantity:</span>
                   <input
-                    type="quantity"
+                    type="number"
                     required
                     onChange={handleQuantityChange}
                     value={quantity}
                     className="mt-1 p-1 block w-full rounded-md text-black bg-gray-100 focus:bg-white"
+                    min={1}
+                    max={99}
                   />
                 </label>
     
                 <label className="block mb-4 ">
                   <span className="text-gray-800">Item Category:</span>
-                  <input
-                    type="Category"
-                    required
-                    onChange={handleCategoryChange}
-                    value={Category}
-                    className="mt-1 p-1 block w-full rounded-md text-black bg-gray-100 focus:bg-white"
-                  />
+                  <select onchange={handleCategoryChange} classname="shadow appearance-none norder rounded-lg w-2/4 py-2 px-3 text-gay-700 leading-tight focus:outline-none focus:shadow-outline-none"> 
+                    <option disabled>Category</option>
+                    <option value='Produce'selected>Produce</option>
+                    <option value='Dairy'>Dairy</option>
+                    <option value='Bakery'>Bakery</option>
+                    <option value='Meat'>Meat</option>
+                    <option value='Frozen Foods'>Frozen Foods</option>
+                    <option value='Canned Goods'>Canned Goods</option>
+                    <option value='Dry Goods'>Dry Goods</option>
+                    <option value='Beverages'>Beverages</option>
+                    <option value='Snacks'>Snacks</option>
+                    <option value='Household'>Household</option>
+                    <option value='Other'>Other</option>
+                  </select>
                 </label>
     
                 <button
                   type="submit"
                   className="w-full py-2 px-4 bg-sky-600 hover:bg-sky-500 rounded-md text-white"
                 >
-                  Create Event
+                  Create Item
                 </button>
               </form>
             </div>
