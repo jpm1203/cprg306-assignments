@@ -3,8 +3,8 @@ import ItemList from "./item-list";
 
 export default function Page() {
     return (
-        <main className="mx-4">
-            <h1 className="text-3xl font-bold my-4">Shopping List</h1>
+        <main>
+            <h1 className="text-4xl font-bold text-center text-green-500">Shopping List</h1><br></br>
             <ItemList />
         </main>
     );
