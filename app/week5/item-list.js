@@ -1,4 +1,5 @@
 "use client"
+
 import { useState } from "react";
 import Item from "./item";
 import items from "./items";
@@ -28,13 +29,18 @@ export default function ItemList() {
     return (
         <div>
             <div className="flex gap-3">
-                <button className="bg-blue-500 w-20 p-1 focus:bg-green-500 rounded" onClick={handleSortByName}>Name</button>
-                <button className="bg-blue-500 w-20 p-1 focus:bg-green-500 rounded" onClick={handleSortByCategory}>Category</button>
-                <button className="bg-blue-500 w-20 p-1 focus:bg-green-500 rounded" onClick={handleSortByGroup}>Category</button>
+                <button className="bg-red-500 w-20 p-1 focus:bg-green-500 rounded" onClick={handleSortByName}>Name</button>
+                <button className="bg-red-500 w-20 p-1 focus:bg-green-500 rounded" onClick={handleSortByCategory}>Category</button>
+                <button className="bg-red-500 w-20 p-1 focus:bg-green-500 rounded" onClick={handleSortByGroup}>Group</button>
             </div>
 
             {sortedItems.map((item) => (
-                <Item key={item.id} name={item.name} quantity={item.quantity} category={item.category} />
+                <Item 
+                key={item.id} 
+                name={item.name} 
+                quantity={item.quantity} 
+                category={item.category} 
+                />
             ))}
         </div>
 
