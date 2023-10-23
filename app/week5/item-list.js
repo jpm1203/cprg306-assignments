@@ -29,9 +29,9 @@ export default function ItemList() {
     return (
         <div>
             <div className="flex gap-3">
-                <button className="bg-red-500 w-20 p-1 focus:bg-green-500 rounded" onClick={handleSortByName}>Name</button>
-                <button className="bg-red-500 w-20 p-1 focus:bg-green-500 rounded" onClick={handleSortByCategory}>Category</button>
-                <button className="bg-red-500 w-20 p-1 focus:bg-green-500 rounded" onClick={handleSortByGroup}>Group</button>
+                <button className="bg-white-500 w-20 p-1 focus:bg-green-500 rounded" onClick={handleSortByName}>Name</button>
+                <button className="bg-white-500 w-20 p-1 focus:bg-green-500 rounded" onClick={handleSortByCategory}>Category</button>
+                <button className="bg-white-500 w-20 p-1 focus:bg-green-500 rounded" onClick={handleSortByGroup}>Group</button>
             </div>
 
             {sortedItems.map((item) => (
