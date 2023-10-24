@@ -18,10 +18,6 @@ export default function ItemList() {
         setSortBy("category");
     }
 
-    const handleSortByGroup = () => {
-        setSortBy("group");
-    }
-
     const sortedItems = (sortBy === "name") ? items.sort((a, b) => a.name.localeCompare(b.name) ) : items.sort((a, b) =>  a.category.localeCompare(b.category) );
 
 
@@ -31,7 +27,6 @@ export default function ItemList() {
             <div className="flex gap-3">
                 <button className="bg-white-500 w-20 p-1 focus:bg-green-500 rounded" onClick={handleSortByName}>Name</button>
                 <button className="bg-white-500 w-20 p-1 focus:bg-green-500 rounded" onClick={handleSortByCategory}>Category</button>
-                <button className="bg-white-500 w-20 p-1 focus:bg-green-500 rounded" onClick={handleSortByGroup}>Group</button>
             </div>
 
             {sortedItems.map((item) => (
