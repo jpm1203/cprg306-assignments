@@ -1,12 +1,8 @@
-"use client"
-
 import { useState } from "react";
 import Item from "./item";
-import items from "./items";
 
 
-
-export default function ItemList() {
+export default function ItemList({items}) {
 
     const [sortBy, setSortBy] = useState("name");
 
@@ -18,10 +14,16 @@ export default function ItemList() {
         setSortBy("category");
     }
 
-    const sortedItems = (sortBy === "name") ? items.sort((a, b) => a.name.localeCompare(b.name) ) : items.sort((a, b) =>  a.category.localeCompare(b.category) );
-
-
-    console.log(sortedItems);
+    const sortedItems = [...items].sort((a, b) => {
+        if (sortBy === 'name') {
+          return a.name.localeCompare(b.name);
+        } else if (sortBy === 'category') {
+          return a.category.localeCompare(b.category);
+        }
+        // Add a default return value for cases where neither 'name' nor 'category' is chosen for sorting
+        return 0;
+      });
+      
     return (
         <div>
             <div className="flex gap-3">

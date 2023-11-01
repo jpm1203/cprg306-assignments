@@ -2,28 +2,28 @@
 
 import { useState } from "react";
 
-export default function NewItem() {
+export default function NewItem({onAddItem}) {
   const [name, setName] = useState("");
   const [quantity, setQuantity] = useState(1);
   const [category, setCategory] = useState("produce");
-  const [itemCreated, setItemCreated] = useState("false");
+
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        alert(`submitted ${name} ${quantity} ${category}`);
+        alert (`Submitting ${name} ${quantity} ${category}`);
 
-        const newItem = {
+        const item = {
             name,
             quantity,
             category,
 
         };
-        console.log(newItem);
-        setItemCreated(true);
+        onAddItem(item);
+
         setName("");
-        setQuantity("");
-        setCategory("");
-        setItemCreated(false);
+        setQuantity(1);
+        setCategory("Produce");
+        
     
     };
     const handleNameChange = (event) => {
@@ -86,8 +86,7 @@ export default function NewItem() {
     
                 <button
                   type="submit"
-                  className="w-full py-2 px-4 bg-sky-600 hover:bg-sky-500 rounded-md text-white"
-                >
+                  className="w-full py-2 px-4 bg-sky-600 hover:bg-sky-500 rounded-md text-white">
                   Create Item
                 </button>
               </form>
