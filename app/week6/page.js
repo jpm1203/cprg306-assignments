@@ -10,10 +10,10 @@ export default function Page() {
     const handleAddItem = (newItem) => { setItems([...items, newItem]);}
 
     const pageStyle = {
-    backgroundImage: 'url("https://images.unsplash.com/photo-1557683316-973673baf926?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8c2hvcHBpbmd8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80")',
+    backgroundImage: 'url("https://foodindustry.asia/hubfs/What%20we%20do-1.png")',
     backgroundSize: 'cover',
-    backgroundColor: 'transparent',
-    height: '170vh',
+    backgroundRepeat: 'no-repeat',
+    height: '190vh',
     };
 
     return (

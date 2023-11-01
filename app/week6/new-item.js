@@ -10,7 +10,7 @@ export default function NewItem({onAddItem}) {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        alert (`Submitting ${name} ${quantity} ${category}`);
+        alert (`Item Added: ${name} ${quantity} ${category}`);
 
         const item = {
             name,
@@ -38,7 +38,7 @@ export default function NewItem({onAddItem}) {
     
     return (
         <main>
-            <div className="w-full m-2 max-w-md bg-white p-7 rounded-lg shadow-md">
+            <div className="border border-sky-500 w-full m-2 max-w-md bg-transparent-800 p-7 rounded-lg shadow-md">
               <h1 className="text-2xl text-gray-800 font-bold mb-3">Add New Item</h1>
               <form onSubmit={handleSubmit}>
                 <label className="block mb-4">
