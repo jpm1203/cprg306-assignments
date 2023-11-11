@@ -13,7 +13,7 @@ export default function Page() {
     backgroundImage: 'url("https://foodindustry.asia/hubfs/What%20we%20do-1.png")',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
-    height: '190vh',
+    height: 'auto',
     };
 
     return (
