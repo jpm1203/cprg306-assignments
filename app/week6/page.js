@@ -8,9 +8,17 @@ import { useState } from "react";
 export default function Page() {
     const [items, setItems] = useState(itemsData)
     const handleAddItem = (newItem) => { setItems([...items, newItem]);}
+
+    const pageStyle = {
+    backgroundImage: 'url("https://foodindustry.asia/hubfs/What%20we%20do-1.png")',
+    backgroundSize: 'cover',
+    backgroundRepeat: 'no-repeat',
+    height: '190vh',
+    };
+
     return (
-        <main>
-            <h1 className="text-4xl font-bold text-center text-green-500">Shopping List</h1><br></br>
+        <main style={pageStyle}>
+            <h1 className="text-4xl font-bold m-2 p-7 text-center stext-center text-green-800">Shopping List</h1><br></br>
             <NewItem onAddItem={handleAddItem} />
             <ItemList items={items}/>
         </main>

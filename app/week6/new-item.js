@@ -10,7 +10,7 @@ export default function NewItem({onAddItem}) {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        alert (`Submitting ${name} ${quantity} ${category}`);
+        alert (`Item Added: ${name} ${quantity} ${category}`);
 
         const item = {
             name,
@@ -38,10 +38,8 @@ export default function NewItem({onAddItem}) {
     
     return (
         <main>
-            <div className="w-full max-w-md bg-white p-8 rounded-lg shadow-md">
-              <h1 className="text-2xl text-gray-800 font-bold mb-8">
-                Create New Item
-              </h1>
+            <div className="border border-sky-500 w-full m-2 max-w-md bg-transparent-800 p-7 rounded-lg shadow-md">
+              <h1 className="text-2xl text-gray-800 font-bold mb-3">Add New Item</h1>
               <form onSubmit={handleSubmit}>
                 <label className="block mb-4">
                   <span className="text-gray-800">Item Name:</span>
@@ -49,45 +47,44 @@ export default function NewItem({onAddItem}) {
                     required
                     onChange={handleNameChange}
                     value={name}
-                    className="mt-1 p-1 block w-full rounded-md text-black bg-gray-100 focus:bg-white"
+                    className="w-full mt-1 border-2 border-gray-300 p-2 rounded-lg font-sans"
                   />
                 </label>
-    
-                <label className="block mb-4">
-                  <span className="text-gray-800">Item quantity:</span>
-                  <input
-                    type="number"
-                    required
-                    onChange={handleQuantityChange}
-                    value={quantity}
-                    className="mt-1 p-1 block w-full rounded-md text-black bg-gray-100 focus:bg-white"
-                    min={1}
-                    max={99}
-                  />
+            
+                <div className="flex justify-between">
+                    <label>
+                        <input
+                            className="w-20 ml-1 border-2 border-gray-300 p-2 rounded-lg font-sans"
+                            type="number"
+                            value={quantity}
+                            onChange={handleQuantityChange}     
+                            min={1}
+                            max={99}
+                        /> 
                 </label>
     
-                <label className="block mb-4 ">
+                <label className="block mb-2">
                   <span className="text-gray-800">Item Category:</span>
-                  <select onchange={handleCategoryChange} classname="shadow appearance-none norder rounded-lg w-2/4 py-2 px-3 text-gay-700 leading-tight focus:outline-none focus:shadow-outline-none"> 
+                   <select onChange={handleCategoryChange} className="ml-1 border-2 border-gray-300 p-2 rounded-lg font-sans">
                     <option disabled>Category</option>
-                    <option value='Produce'selected>Produce</option>
-                    <option value='Dairy'>Dairy</option>
-                    <option value='Bakery'>Bakery</option>
-                    <option value='Meat'>Meat</option>
-                    <option value='Frozen Foods'>Frozen Foods</option>
-                    <option value='Canned Goods'>Canned Goods</option>
-                    <option value='Dry Goods'>Dry Goods</option>
-                    <option value='Beverages'>Beverages</option>
-                    <option value='Snacks'>Snacks</option>
-                    <option value='Household'>Household</option>
-                    <option value='Other'>Other</option>
+                    <option value="Produce"selected>Produce</option>
+                    <option value="Dairy">Dairy</option>
+                    <option value="Bakery">Bakery</option>
+                    <option value="Meat">Meat</option>
+                    <option value="Frozen Foods">Frozen Foods</option>
+                    <option value="Canned Goods">Canned Goods</option>
+                    <option value="Dry Goods">Dry Goods</option>
+                    <option value="Beverages">Beverages</option>
+                    <option value="Snacks">Snacks</option>
+                    <option value="Household">Household</option>
+                    <option value="Other">Other</option>
                   </select>
                 </label>
-    
+              </div>
                 <button
                   type="submit"
-                  className="w-full py-2 px-4 bg-sky-600 hover:bg-sky-500 rounded-md text-white">
-                  Create Item
+                  className="w-full py-2 mt-2 bg-sky-600  hover:bg-green-800 rounded-md text-black">
+                  Add Item
                 </button>
               </form>
           </div>

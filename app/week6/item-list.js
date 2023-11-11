@@ -15,20 +15,21 @@ export default function ItemList({items}) {
     }
 
     const sortedItems = [...items].sort((a, b) => {
-        if (sortBy === 'name') {
+        if (sortBy === "name") {
           return a.name.localeCompare(b.name);
-        } else if (sortBy === 'category') {
+        } else if (sortBy === "category") {
           return a.category.localeCompare(b.category);
         }
-        // Add a default return value for cases where neither 'name' nor 'category' is chosen for sorting
+        
         return 0;
       });
       
     return (
         <div>
-            <div className="flex gap-3">
-                <button className="bg-white-500 w-20 p-1 focus:bg-green-500 rounded" onClick={handleSortByName}>Name</button>
-                <button className="bg-white-500 w-20 p-1 focus:bg-green-500 rounded" onClick={handleSortByCategory}>Category</button>
+            <div className="mt-8 m-2">
+                <label htmlFor="bg-white-500 w-20 m-2 p-1 focus:bg-green-800">Sort by:</label>
+                <button className="bg-sky-600 w-20 m-2 p-1 focus:bg-green-800 rounded" onClick={handleSortByName}>Name</button>
+                <button className="bg-sky-600 w-20 m-2 p-1 focus:bg-green-800 rounded" onClick={handleSortByCategory}>Category</button>
             </div>
 
             {sortedItems.map((item) => (
